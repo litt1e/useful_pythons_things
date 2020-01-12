@@ -11,11 +11,13 @@ server = Flask(__name__)
 
 @server.route('/' + TOKEN, methods=['POST'])
 def getMessage():
+    print("Message has been got")
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
     return "!", 200
 
 @server.route("/")
 def webhook():
+    print("It is works")
     bot.remove_webhook()
     bot.set_webhook(url='https://shlyapikbot.heroku.com/' + TOKEN)
     return "!", 200
