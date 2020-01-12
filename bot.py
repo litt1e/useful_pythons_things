@@ -19,7 +19,7 @@ def getMessage():
 def webhook():
     print("It is works")
     r = bot.remove_webhook()
-    r2 = bot.set_webhook(url='https://shlyapikbot.herokuapp.com' + TOKEN)
+    r2 = bot.set_webhook(url='https://shlyapikbot.herokuapp.com/' + TOKEN)
     print(f"{r},\n++++++++\n {r2}")
     return "!", 200
 
