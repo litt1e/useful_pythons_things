@@ -18,15 +18,17 @@ def getMessage():
 @server.route("/")
 def webhook():
     print("It is works")
-    bot.remove_webhook()
-    bot.set_webhook(url='https://shlyapikbot.heroku.com/' + TOKEN)
+    r = bot.remove_webhook()
+    r2 = bot.set_webhook(url='https://shlyapikbot.heroku.com/' + TOKEN)
+    print(f"{r},\n++++++++\n {r2}")
     return "!", 200
 
 
 @bot.message_handler(commands=['start'])
 def start(message):
     print("Started new user")
-    bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
+    r3 = bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
+    print(f"\n+++++====\n{r3}\n+++++====\n")
 
 
 @bot.message_handler(func=lambda message: True, content_types=['text'])
