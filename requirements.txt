@@ -1,0 +1,2 @@
+flask==1.1.1
+pytelegrambotapi==3.6.6
