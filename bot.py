@@ -1,4 +1,9 @@
 #from wsgi import bot
+import telebot
+import os
+
+TOKEN = os.environ.get('TOKEN')
+bot = telebot.TeleBot(TOKEN)
 
 
 @bot.message_handler(commands=['start'])

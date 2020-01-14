@@ -6,7 +6,7 @@ from bot import *
 import telebot
 
 TOKEN = os.environ.get('TOKEN')
-bot = telebot.TeleBot(TOKEN)
+
 app = Flask(__name__)
 
 #  сделать wsgi
