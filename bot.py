@@ -1,4 +1,4 @@
-from wsgi import bot
+#from wsgi import bot
 
 
 @bot.message_handler(commands=['start'])
