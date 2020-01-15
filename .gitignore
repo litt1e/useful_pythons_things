@@ -1,3 +1,16 @@
 venv
 .idea/*
 *.pyc
+
+
+
+{'content_type': 'text',
+'message_id': 126,
+'from_user': {
+'id': 810202457,
+'is_bot': True,
+'first_name': 'вк музочка',
+'username': 'shlyapik_m_bot',
+ 'last_name': None, 'language_code': None}, 'date': 1579030906, 'chat': {'type': 'private', 'last_name': '�',
+'first_name': 'saNYA', 'username': 'shlyap1k', 'id': 292256862, 'title': None, 'all_members_are_administrators': None, 'photo': None, 'description': Non
+e,

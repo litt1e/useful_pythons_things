@@ -1,21 +1,18 @@
-import os
-
 from flask import Flask, request
 from bot import *
 
-import telebot
 
 TOKEN = os.environ.get('TOKEN')
 
 app = Flask(__name__)
 
-#  сделать wsgi
 
 @app.route('/' + TOKEN, methods=['POST'])
 def getMessage():
     print("Message has been got")
     bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
     return "!", 200
+
 
 @app.route("/")
 def webhook():
@@ -24,7 +21,6 @@ def webhook():
     r2 = bot.set_webhook(url='https://shlyapikbot.herokuapp.com/' + TOKEN)
     print(f"{r},\n++++++++\n {r2}")
     return "!", 200
-
 
 
 if __name__ == "__main__":
